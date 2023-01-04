@@ -2,9 +2,9 @@ package mn;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
+       task1();
+         task2();
+         task3();
         task4();
     }
 
@@ -25,7 +25,7 @@ public class Main {
         int sum = 0;
         for(int i = 0; i < arr.length; i++) {
             int   sum1 = arr[i];
-            sum=sum1;
+            sum=sum1*30;
 
         }
 
@@ -41,11 +41,11 @@ public class Main {
         int spendingMax = arr[0];
         int spendingMin = arr[0];
 
-        for (int i = 0; i < arr.length; i++) {
-            if (i < spendingMin) {
-                spendingMin = i;
-            } else if (i > spendingMax) {
-                spendingMax = i;
+        for (int i : arr) {
+            if (i < spendingMin  ) {
+               spendingMin =i;
+            } else if (i > spendingMax){
+             spendingMax =i ;
             }
 
         }
@@ -60,11 +60,11 @@ public class Main {
          Важно помнить: подсчет среднего значения может иметь остаток, то есть быть не целым, а дробным числом.
          */
         int[] arr = generateRandomArray();
-        int month= 0;
+       int month= 0;
         for (int i : arr) {
-            month+=i/30;
+           month += i;
         }
-        System.out.println("Средняя трат за день составила " + month + " рублей.");
+        System.out.println("Средняя трат за день составила " + month/(float)arr.length + " рублей.");
 
 
     }
@@ -82,7 +82,7 @@ public class Main {
         int[] arr = generateRandomArray();
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length-1;i>=0;i++ ){
-            System.out.println( reverseFullName    [i]        );
+            System.out.println( reverseFullName [i]);
         }
     }
 }
