@@ -25,7 +25,7 @@ public class Main {
         int sum = 0;
         for(int i = 0; i < arr.length; i++) {
             int   sum1 = arr[i];
-            sum=sum1*30;
+            sum=sum1;
 
         }
 
